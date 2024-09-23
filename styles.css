@@ -34,15 +34,30 @@
     pointer-events: auto; 
   }
   
-  h2 {
-    margin-bottom: 20px;
+  .h2 {
     color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
   }
 
-  p {
+  .p {
     font-size: 1.2rem;
-    line-height: 0;
     color: var(--text-color);
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .p1 {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    display: flex;
+    font-style: italic;
+    justify-content: center;
+    margin-bottom: 10px;
   }
 
   .filter-tags {
@@ -72,12 +87,12 @@
     transition: background-color 0.3s, color 0.3s;
     color: #fff;
     box-sizing: border-box;
-    user-select: none; /* Disable text selection */
+    user-select: none;
   }
   
   .tag.selected {
     border: 2px solid #ffffff;
-    margin: 3px; /* Adjust margin to maintain spacing */
+    margin: 3px;
   }
   
   .tag[data-tag="Savory"] { background-color: var(--color-savory); }
@@ -108,7 +123,6 @@
     padding: 15px;
     margin: 10px 0;
     width: 100%;
-    max-width: 50%;
     box-sizing: border-box;
   }
   
@@ -151,6 +165,7 @@
   .stack {
     display: grid;
     grid-template-columns: 1fr;
+    user-select: none;
   }
   
   .stack span {
@@ -204,6 +219,11 @@
     overflow: hidden;
     mix-blend-mode: difference;
     pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
   
   .scanlines::before {
