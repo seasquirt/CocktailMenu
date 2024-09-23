@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tag.addEventListener('click', () => {
         tag.classList.toggle('selected');
         filterCocktails();
-        window.navigator.vibrate([20])
+        window.navigator.vibrate([10])
       });
     });
   
