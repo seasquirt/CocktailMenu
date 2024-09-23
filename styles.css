@@ -24,8 +24,7 @@
     background-color: #000000;
     margin: 0;
     text-align: center;
-    zoom: 125%;
-    overflow: hidden;
+    zoom: 100%;
   }
   
   .container {
