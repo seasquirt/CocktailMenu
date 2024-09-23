@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocktail Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body background='res/background.gif'>
+  <div class="scanlines"></div>
+  <div class="container">
+    <div class="stack" style="--stacks: 3;">
+      <span style="--index: 0;">COCKTAIL MENU</span>
+      <span style="--index: 1;">COCKTAIL MENU</span>
+      <span style="--index: 2;">COCKTAIL MENU</span>
+    </div>
+    <div class="centerthisshit">
+    <div class="filter-tags">
+      <span class="tag" data-tag="Savory"></span>
+      <span class="tag" data-tag="Bitter"></span>
+      <span class="tag" data-tag="Tart"></span>
+      <span class="tag" data-tag="Sweet"></span>
+      <span class="tag" data-tag="Strong"></span>
+      <span class="tag" data-tag="Dry"></span>
+      <span class="tag" data-tag="Spicy"></span>
+      <span class="tag" data-tag="Fresh"></span>
+      <span class="tag" data-tag="Smoky"></span>
+      <span class="tag" data-tag="Creamy"></span>
+      <span class="tag" data-tag="Herbal"></span>
+      <span class="tag" data-tag="Fizzy"></span>
+    </div>
+    </div>
+    <div class="menu">
+      <div class="cocktail" data-tags="Sweet Tart Fresh">
+        <h2>Life Is Balloons</h2>
+        <p>This delicious craft gin cocktail is bursting with juicy flavors</p>
+        <p><i>Gin, Peach Liqueur, Orange Juice, Happiness</i></p>
+        <div class="cocktail-tags"></div>
+      </div>
+      <div class="cocktail" data-tags="Strong Tart Spicy Fizzy">
+        <h2>Too Much Volcano</h2>
+        <p>A fiery homage to Mount Aso, the largest active volcano in Japan</p>
+        <p><i>El Charro Silver Tequila, Grapefruit Juice, Cointreau, Lime, Tonic, Spice!</i></p>
+        <div class="cocktail-tags"></div>
+      </div>
+      <div class="cocktail" data-tags="Fresh Fizzy Herbal">
+        <h2>Like A Magic Mule</h2>
+        <p>Classic Moscow mule infused with a refreshing touch of lavender</p>
+        <p><i>Vodka, Elderflower Liqueur, Lemon Juice, Creme De Violet, Ginger Beer, Love</i></p>
+        <div class="cocktail-tags"></div>
+      </div>
+      <!-- Add more cocktails here -->
+    </div>
+    <div class="no-results">No cocktails match the selected tags.</div>
+  </div>
+  <script src="scripts.js"></script>
+</div>
+</body>
+</html>

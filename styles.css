@@ -1,0 +1,236 @@
+:root {
+    --color-savory: #ff6f61;
+    --color-bitter: #8d6e63;
+    --color-tart: #ffd54f;
+    --color-sweet: #f06292;
+    --color-strong: #9575cd;
+    --color-dry: #4fc3f7;
+    --color-spicy: #ff7043;
+    --color-fresh: #81c784;
+    --color-smoky: #6d4c41;
+    --color-creamy: #dce775;
+    --color-herbal: #a5d6a7;
+    --color-fizzy: #4db6ac;
+    --background: #060608;
+    --text-color: #FAFAFA;
+  }
+  @font-face {
+    font-family: "Pixel";
+    src: url('fonts/CyberpunkWaifus.ttf') format('truetype');
+  }
+
+  body {
+    font-family: "Pixel", Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    text-align: center;
+    zoom: 125%;
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    pointer-events: auto; 
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 0;
+    color: var(--text-color);
+  }
+
+  .filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: #260933;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  
+  .centerthisshit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .tag {
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: #fff;
+    box-sizing: border-box;
+    user-select: none; /* Disable text selection */
+  }
+  
+  .tag.selected {
+    border: 2px solid #ffffff;
+    margin: 3px; /* Adjust margin to maintain spacing */
+  }
+  
+  .tag[data-tag="Savory"] { background-color: var(--color-savory); }
+  .tag[data-tag="Bitter"] { background-color: var(--color-bitter); }
+  .tag[data-tag="Tart"] { background-color: var(--color-tart); }
+  .tag[data-tag="Sweet"] { background-color: var(--color-sweet); }
+  .tag[data-tag="Strong"] { background-color: var(--color-strong); }
+  .tag[data-tag="Dry"] { background-color: var(--color-dry); }
+  .tag[data-tag="Spicy"] { background-color: var(--color-spicy); }
+  .tag[data-tag="Fresh"] { background-color: var(--color-fresh); }
+  .tag[data-tag="Smoky"] { background-color: var(--color-smoky); }
+  .tag[data-tag="Creamy"] { background-color: var(--color-creamy); }
+  .tag[data-tag="Herbal"] { background-color: var(--color-herbal); }
+  .tag[data-tag="Fizzy"] { background-color: var(--color-fizzy); }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .cocktail {
+    background: #091833;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 50%;
+    box-sizing: border-box;
+  }
+  
+  .cocktail-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .cocktail .tag {
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    box-sizing: border-box;
+    cursor: default;
+    user-select: none; /* Disable text selection */
+  }
+  
+  .cocktail .tag[data-tag="Savory"] { background-color: var(--color-savory); }
+  .cocktail .tag[data-tag="Bitter"] { background-color: var(--color-bitter); }
+  .cocktail .tag[data-tag="Tart"] { background-color: var(--color-tart); }
+  .cocktail .tag[data-tag="Sweet"] { background-color: var(--color-sweet); }
+  .cocktail .tag[data-tag="Strong"] { background-color: var(--color-strong); }
+  .cocktail .tag[data-tag="Dry"] { background-color: var(--color-dry); }
+  .cocktail .tag[data-tag="Spicy"] { background-color: var(--color-spicy); }
+  .cocktail .tag[data-tag="Fresh"] { background-color: var(--color-fresh); }
+  .cocktail .tag[data-tag="Smoky"] { background-color: var(--color-smoky); }
+  .cocktail .tag[data-tag="Creamy"] { background-color: var(--color-creamy); }
+  .cocktail .tag[data-tag="Herbal"] { background-color: var(--color-herbal); }
+  .cocktail .tag[data-tag="Fizzy"] { background-color: var(--color-fizzy); }
+  
+  .no-results {
+    display: none;
+    font-size: 1.5em;
+    color: #ff0000;
+    margin-top: 20px;
+  }
+
+  .stack {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .stack span {
+    font-weight: bold;
+    color: #ffffff;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    font-size: 4rem;
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+    animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
+  }
+  
+  .stack span:nth-child(odd) { --glitch-translate: 8px; }
+  .stack span:nth-child(even) { --glitch-translate: -8px; }
+  
+  @keyframes stack {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    };
+    60% {
+      opacity: 0.5;
+      transform: translateX(50%);
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+      transform: translate(var(--glitch-translate));
+    }
+    2% {
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    4%, 100% {  text-shadow: none; transform: none; }
+  }
+  .scanlines {
+    overflow: hidden;
+    mix-blend-mode: difference;
+    pointer-events: none;
+  }
+  
+  .scanlines::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(255, 255, 255, 0.05) .5%,
+      transparent 1%
+    );
+  
+    animation: fudge 7s ease-in-out alternate infinite;
+  }
+  
+  
+  @keyframes fudge {
+    from {
+      transform: translate(0px, 0px);
+    }
+    to {
+      transform: translate(0px, 2%);
+    }
+  }
