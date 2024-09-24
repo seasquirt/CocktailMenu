@@ -2,38 +2,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const tags = document.querySelectorAll('.filter-tags .tag');
   const menu = document.querySelector('.menu');
   const noResults = document.querySelector('.no-results');
-
-  // Define the cocktail data directly in JavaScript
-  const cocktails = [
-    {
-      title: "Life Is Balloons",
-      description: "This delicious craft gin cocktail is bursting with juicy flavors",
-      ingredients: "Gin, Peach Liqueur, Orange Juice, Happiness",
-      tags: "#Sweet #Tart #Fresh"
-    },
-    {
-      title: "London Calling",
-      description: "A floral twist on gin tonic infused with the sweetness of elder flower",
-      ingredients: "Gin, Elderflower Liqueur, Lime, Tonic, Stoicism",
-      tags: "#Fresh #Herbal #Sweet #Dry"
-    },
-    {
-      title: "Too Much Volcano",
-      description: "A fiery homage to Mount Aso, the largest active volcano in Japan",
-      ingredients: "El Charro Silver Tequila, Grapefruit Juice, Cointreau, Lime, Tonic, Spice!",
-      tags: "#Strong #Tart #Spicy #Fizzy"
-    }
-    // Add more cocktails here
-  ];
+  let cooldown = false; // Cooldown flag
+  const cooldownDuration = 100; // Cooldown duration in milliseconds
 
   tags.forEach(tag => {
     tag.textContent = tag.dataset.tag;
     tag.addEventListener('click', () => {
+      if (cooldown) return; // If cooldown is active, ignore the click
+
       tag.classList.toggle('selected');
       filterCocktails();
       window.navigator.vibrate([5]);
+
+      cooldown = true; // Activate cooldown
+      setTimeout(() => {
+        cooldown = false; // Deactivate cooldown after the specified duration
+      }, cooldownDuration);
     });
   });
+
+  fetch('cocktails/cocktails.json')
+    .then(response => response.json())
+    .then(data => {
+      loadCocktails(data);
+    })
+    .catch(error => {
+      console.error('Error fetching the cocktails.json file:', error);
+    });
 
   function loadCocktails(data) {
     menu.innerHTML = ''; // Clear existing cocktails
@@ -53,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     filterCocktails();
-    window.navigator.vibrate([5]);
   }
 
   function filterCocktails() {
@@ -68,26 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const hasAllSelectedTags = selectedTags.every(tag => cocktailTags.includes(tag));
 
       if (hasAllSelectedTags) {
-        if (cocktail.style.display === 'none') {
-          cocktail.classList.remove('fade-out');
-          cocktail.classList.add('fade-in');
-          cocktail.style.display = '';
-        }
+        cocktail.classList.remove('fade-out');
+        cocktail.classList.add('fade-in');
+        cocktail.style.display = ''; // Ensure it's visible if previously hidden
         visibleCocktails++;
       } else {
-        if (cocktail.style.display !== 'none') {
-          cocktail.classList.remove('fade-in');
-          cocktail.classList.add('fade-out');
-          setTimeout(() => {
-            cocktail.style.display = 'none';
-          }, 500); // Match this duration with the animation duration
-        }
+        cocktail.classList.remove('fade-in');
+        cocktail.classList.add('fade-out');
+        setTimeout(() => {
+          cocktail.style.display = 'none';
+        }, 100); // Match this duration with the animation duration
       }
     });
 
     noResults.style.display = visibleCocktails > 0 ? 'none' : 'block';
   }
-
-  // Load cocktails on page load
-  loadCocktails(cocktails);
 });

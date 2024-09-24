@@ -14,6 +14,7 @@
   --background: #060608;
   --text-color: #FAFAFA;
 }
+
 @font-face {
   font-family: "Pixel";
   src: url('fonts/CyberpunkWaifus.ttf') format('truetype');
@@ -127,7 +128,7 @@ body {
   opacity: 1;
   max-height: 500px; /* Ensure this value is large enough to accommodate the tallest cocktail entry */
   overflow: hidden;
-  transition: max-height 0.1s ease, opacity 0.1s ease, padding 0.1 ease;
+  transition: max-height 0.1s ease, opacity 0.1s ease, padding 0.1s ease;
 }
 
 .fade-in {
@@ -139,21 +140,13 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-  from { max-height: 0; }
-  to { max-height: 500px; }
-  from { padding: 0; }
-  to { padding: 15px; }
+  from { opacity: 0; max-height: 0; padding: 0; }
+  to { opacity: 1; max-height: 500px; padding: 15px; }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
-  from { max-height: 500px; }
-  to { max-height: 0; }
-  from { padding: 15px; }
-  to { padding: 0; }
+  from { opacity: 1; max-height: 500px; padding: 15px; }
+  to { opacity: 0; max-height: 0; padding: 0; }
 }
 
 .cocktail-tags {
