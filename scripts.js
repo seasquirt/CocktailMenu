@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let cooldown = false; // Cooldown flag
   const cooldownDuration = 100; // Cooldown duration in milliseconds
 
+  // Retrieve favorites from localStorage
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
   tags.forEach(tag => {
     tag.textContent = tag.dataset.tag;
     tag.addEventListener('click', () => {
@@ -30,20 +33,28 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error fetching the cocktails.json file:', error);
     });
 
-  function loadCocktails(data) {
+  function loadCocktails(cocktails) {
     menu.innerHTML = ''; // Clear existing cocktails
 
-    data.forEach(cocktail => {
+    cocktails.filter(cocktail => !cocktail.hidden).forEach(cocktail => {
+      const isFavorited = favorites.includes(cocktail.title);
       const cocktailDiv = document.createElement('div');
       cocktailDiv.classList.add('cocktail');
       cocktailDiv.dataset.tags = cocktail.tags.replace(/#/g, '');
+      cocktailDiv.dataset.title = cocktail.title; // Add a data attribute for title
 
       cocktailDiv.innerHTML = `
         <span class="h2">${cocktail.title}</span>
         <span class="p">${cocktail.description}</span>
         <span class="p1"><i>${cocktail.ingredients}</i></span>
+        <img class="favorite-star" src="images/${isFavorited ? 'star-filled.png' : 'star-empty.png'}" alt="Favorite">
         <div class="cocktail-tags">${cocktail.tags.split(' ').map(tag => `<span class="tag" data-tag="${tag.replace(/#/g, '')}">${tag.replace(/#/g, '')}</span>`).join('')}</div>
       `;
+
+      // Add click event for the favorite star
+      const star = cocktailDiv.querySelector('.favorite-star');
+      star.addEventListener('click', () => toggleFavorite(cocktail.title, star));
+
       menu.appendChild(cocktailDiv);
     });
 
@@ -76,5 +87,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     noResults.style.display = visibleCocktails > 0 ? 'none' : 'block';
+  }
+
+  function toggleFavorite(title, star) {
+    window.navigator.vibrate([5]);
+    const index = favorites.indexOf(title);
+    if (index >= 0) {
+      // Remove from favorites
+      favorites.splice(index, 1);
+      star.src = 'images/star-empty.png';
+    } else {
+      // Add to favorites
+      favorites.push(title);
+      star.src = 'images/star-filled.png';
+    }
+
+    // Save favorites to localStorage
+    localStorage.setItem('favorites', JSON.stringify(favorites));
   }
 });

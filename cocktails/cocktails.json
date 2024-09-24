@@ -3,60 +3,71 @@
         "title": "Too Much Volcano",
         "description": "A fiery homage to Mount Aso, the largest active volcano in Japan",
         "ingredients": "El Charro Silver Tequila, Grapefruit Juice, Cointreau, Lime, Tonic, Spice!",
-        "tags": "#Strong #Tart #Spicy #Fizzy"
+        "tags": "#Strong #Tart #Spicy #Fizzy",
+        "hidden": false
     },
     {
         "title": "Like A Magic Mule",
         "description": "Classic Moscow mule infused with a refreshing touch of lavender",
         "ingredients": "Vodka, Elderflower Liqueur, Lemon Juice, Creme De Violet, Ginger Beer, Love",
-        "tags": "#Fresh #Fizzy #Herbal"
+        "tags": "#Fresh #Fizzy #Herbal",
+        "hidden": false
     },
     {
         "title": "Life Is Balloons",
         "description": "This delicious craft gin cocktail is bursting with juicy flavors",
         "ingredients": "Gin, Peach Liqueur, Orange Juice, Happiness",
-        "tags": "#Sweet #Tart #Fresh"
+        "tags": "#Sweet #Tart #Fresh",
+        "hidden": false
     },
     {
         "title": "Go Fuck Yourself",
         "description": "Fresh ginger infused with a classic Margarita",
         "ingredients": "El Charro Silver Tequila, Lime Juice, Ginger Liqueur, Attitude",
-        "tags": "#Strong #Tart #Spicy"
+        "tags": "#Strong #Tart #Spicy",
+        "hidden": false
     },
     {
         "title": "London Calling",
         "description": "A floral twist on gin tonic infused with the sweetness of elder flower",
         "ingredients": "Gin, Elderflower Liqueur, Lime, Tonic, Stoicism",
-        "tags": "#Fresh #Herbal #Sweet #Dry"
+        "tags": "#Fresh #Herbal #Sweet #Dry",
+        "hidden": false
     },
     {
         "title": "Strangelove",
         "description": "A reimagining of the classic rum and coke with tantalizing cherry notes",
         "ingredients": "Plantation 3 Stars Rum, Heering Cherry Liqueur, Coke, Lemon, Soda Water",
-        "tags": "#Sweet #Fizzy"
+        "tags": "#Sweet #Fizzy",
+        "hidden": false
     },
     {
         "title": "Budo-licious",
         "description": "A super smooth grape cocktail to celebrate Japanese grape 'budo' season",
         "ingredients": "Vodka, Grape Liqueur, Crème de cassis, Grapefruit Juice, Caring",
-        "tags": "#Sweet #Tart"
+        "tags": "#Sweet #Tart",
+        "hidden": false
     },
     {
         "title": "El Diablo",
         "description": "This devilish concoction is ironically a very good combination of berry and ginger",
         "ingredients": "El Charro Silver Tequila, Crème de Cassis, Lime Juice, Ginger Beer, Playfulness",
-        "tags": "#Strong #Spicy #Sweet #Fizzy"
+        "tags": "#Strong #Spicy #Sweet #Fizzy",
+        "hidden": false
     },
     {
         "title": "Blue Monday",
         "description": "A soothing cocktail that pays tribute to calpico, a neglected ingredient as of late",
         "ingredients": "Vodka, Calpico, Lemon Juice, Blue Curacao, Soda Water",
-        "tags": "#Sweet #Fizzy #Creamy"
+        "tags": "#Sweet #Fizzy #Creamy",
+        "hidden": false
     },
     {
         "title": "Easy Lover",
         "description": "A tropical delight that’s as refreshing as it is irresistible",
         "ingredients": "Plantation 3 Stars Rum, Cranberry Juice, Pineapple Juice, Grenadine, Sprite",
-        "tags": "#Sweet #Fizzy"
+        "tags": "#Sweet #Fizzy",
+        "hidden": false
     }
 ]
+
