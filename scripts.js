@@ -5,13 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let cooldown = false; // Cooldown flag
   const cooldownDuration = 100; // Cooldown duration in milliseconds
 
-window.addEventListener("load",function() {
-    setTimeout(function(){
-        // This hides the address bar:
-        window.scrollTo(0, 1);
-    }, 0);
-});
-  
   tags.forEach(tag => {
     tag.textContent = tag.dataset.tag;
     tag.addEventListener('click', () => {
