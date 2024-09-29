@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const tags = document.querySelectorAll('.filter-tags .tag');
   const menu = document.querySelector('.menu');
   const noResults = document.querySelector('.no-results');
+  const randomButton = document.querySelector('.random-button');
+  const randomModal = document.getElementById('random-modal');
+  const randomModalContent = randomModal.querySelector('.random-modal-content');
   let cooldown = false; // Cooldown flag
   const cooldownDuration = 100; // Cooldown duration in milliseconds
 
@@ -53,7 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Add click event for the favorite star
       const star = cocktailDiv.querySelector('.favorite-star');
-      star.addEventListener('click', () => toggleFavorite(cocktail.title, star));
+      star.addEventListener('click', () => {
+        toggleFavorite(cocktail.title);
+      });
 
       menu.appendChild(cocktailDiv);
     });
@@ -89,20 +94,79 @@ document.addEventListener('DOMContentLoaded', () => {
     noResults.style.display = visibleCocktails > 0 ? 'none' : 'block';
   }
 
-  function toggleFavorite(title, star) {
+  function toggleFavorite(title) {
     window.navigator.vibrate([5]);
     const index = favorites.indexOf(title);
     if (index >= 0) {
       // Remove from favorites
       favorites.splice(index, 1);
-      star.src = 'images/star-empty.png';
     } else {
       // Add to favorites
       favorites.push(title);
-      star.src = 'images/star-filled.png';
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 1 },
+        zIndex: 1000
+      });
+      var audio = new Audio('res/partyblower.mp3');
+      audio.play();
     }
 
     // Save favorites to localStorage
     localStorage.setItem('favorites', JSON.stringify(favorites));
+
+    // Refresh cocktail list and random modal
+    refreshCocktails();
   }
+
+  function refreshCocktails() {
+    const allCocktails = document.querySelectorAll('.cocktail');
+    allCocktails.forEach(cocktail => {
+      const title = cocktail.dataset.title;
+      const isFavorited = favorites.includes(title);
+      const star = cocktail.querySelector('.favorite-star');
+      star.src = `images/${isFavorited ? 'star-filled.png' : 'star-empty.png'}`;
+    });
+
+    // Refresh random modal content if visible
+    if (randomModal.classList.contains('show')) {
+      const title = randomModalContent.querySelector('.h2').textContent;
+      const isFavorited = favorites.includes(title);
+      const star = randomModalContent.querySelector('.favorite-star');
+      star.src = `images/${isFavorited ? 'star-filled.png' : 'star-empty.png'}`;
+    }
+  }
+
+  randomButton.addEventListener('click', () => {
+    const unhiddenCocktails = Array.from(document.querySelectorAll('.cocktail')).filter(cocktail => cocktail.style.display !== 'none');
+    const randomCocktail = unhiddenCocktails[Math.floor(Math.random() * unhiddenCocktails.length)];
+    window.navigator.vibrate([5]);
+    if (randomCocktail) {
+      const randomContent = randomCocktail.cloneNode(true);
+      randomContent.querySelector('.favorite-star').addEventListener('click', function() {
+        const title = randomCocktail.dataset.title;
+        toggleFavorite(title);
+      });
+
+      randomModalContent.innerHTML = '';
+      randomModalContent.appendChild(randomContent);
+      randomModal.classList.add('show');
+      randomModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      menu.classList.add('blurred');
+    }
+  });
+
+  randomModal.addEventListener('click', (event) => {
+    if (event.target === randomModal) {
+      window.navigator.vibrate([5]);
+      randomModal.classList.remove('show');
+      setTimeout(() => {
+        randomModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        menu.classList.remove('blurred');
+      }, 300); // Match this duration with the animation duration
+    }
+  });
 });
