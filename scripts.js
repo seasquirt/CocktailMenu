@@ -46,13 +46,27 @@ document.addEventListener('DOMContentLoaded', () => {
       cocktailDiv.dataset.tags = cocktail.tags.replace(/#/g, '');
       cocktailDiv.dataset.title = cocktail.title; // Add a data attribute for title
 
+      // Determine image path
+      const imageName = cocktail.title.replace(/\s+/g, '') + '.png';
+      const imagePath = `cocktails/${imageName}`;
+      const fallbackImagePath = 'cocktails/Generic.png';
+
+      // Create ABV element
+      const abvElement = document.createElement('span');
+      abvElement.classList.add('abv');
+      abvElement.textContent = `${cocktail.abv}`;
+
       cocktailDiv.innerHTML = `
+        <img class="cocktail-image" src="${imagePath}" onerror="this.onerror=null; this.src='${fallbackImagePath}'" alt="${cocktail.title}">
         <span class="h2">${cocktail.title}</span>
         <span class="p">${cocktail.description}</span>
         <span class="p1"><i>${cocktail.ingredients}</i></span>
         <img class="favorite-star" src="images/${isFavorited ? 'star-filled.png' : 'star-empty.png'}" alt="Favorite">
         <div class="cocktail-tags">${cocktail.tags.split(' ').map(tag => `<span class="tag" data-tag="${tag.replace(/#/g, '')}">${tag.replace(/#/g, '')}</span>`).join('')}</div>
       `;
+
+      // Add the ABV element to the cocktailDiv
+      cocktailDiv.prepend(abvElement);
 
       // Add click event for the favorite star
       const star = cocktailDiv.querySelector('.favorite-star');
@@ -106,8 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       confetti({
         particleCount: 100,
         spread: 70,
-        origin: { y: 1 },
-        zIndex: 1000
+        origin: { y: 1 }
       });
       var audio = new Audio('res/partyblower.mp3');
       audio.play();
@@ -142,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const unhiddenCocktails = Array.from(document.querySelectorAll('.cocktail')).filter(cocktail => cocktail.style.display !== 'none');
     const randomCocktail = unhiddenCocktails[Math.floor(Math.random() * unhiddenCocktails.length)];
     window.navigator.vibrate([5]);
+
     if (randomCocktail) {
       const randomContent = randomCocktail.cloneNode(true);
       randomContent.querySelector('.favorite-star').addEventListener('click', function() {

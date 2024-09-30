@@ -4,13 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cocktail Menu</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
@@ -43,11 +36,17 @@
       </div>
     </div>
     <div class="menu"></div>
-    <div class="no-results">No cocktails match the selected tags.</div>
+    <div class="centerthisshit">
+      <div class="no-results">
+        <img src="images/no_drinks.png"></img>
+        <br />
+        <span>No cocktails match the selected tags.</span>
+     </div>
+    </div>
     <div id="random-modal" class="random-modal">
       <div class="random-modal-content"></div>
     </div>
+    <script src="scripts.js"></script>
   </div>
-  <script src="scripts.js"></script>
 </body>
 </html>
