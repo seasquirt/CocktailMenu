@@ -120,8 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       confetti({
         particleCount: 100,
         spread: 70,
-        origin: { y: 1 },
-        z-index: 1000;
+        origin: { y: 1 }
       });
       var audio = new Audio('res/partyblower.mp3');
       audio.play();
