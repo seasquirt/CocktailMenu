@@ -3,7 +3,7 @@
       "title": "Too Much Volcano",
       "description": "A fiery homage to Mount Aso, the largest active volcano in Japan",
       "ingredients": "El Charro Silver Tequila, Grapefruit Juice, Cointreau, Lime, Tonic, Spice!",
-      "tags": "#Strong #Tart #Spicy #Fizzy",
+      "tags": "#Tart #Spicy #Fizzy",
       "abv": "11%",
       "hidden": false
     },
@@ -11,7 +11,7 @@
       "title": "Like A Magic Mule",
       "description": "Classic Moscow mule infused with a refreshing touch of lavender",
       "ingredients": "Vodka, Elderflower Liqueur, Lemon Juice, Creme De Violet, Ginger Beer, Love",
-      "tags": "#Fresh #Fizzy #Herbal",
+      "tags": "#Fresh #Fizzy #Herbal #Spicy",
       "abv": "11%",
       "hidden": false
     },
@@ -19,7 +19,7 @@
       "title": "Life Is Balloons",
       "description": "This delicious craft gin cocktail is bursting with juicy flavors",
       "ingredients": "Gin, Peach Liqueur, Orange Juice, Happiness",
-      "tags": "#Sweet #Tart #Fresh",
+      "tags": "#Strong #Sweet #Tart #Fresh",
       "abv": "20%",
       "hidden": false
     },
@@ -35,8 +35,8 @@
       "title": "London Calling",
       "description": "A floral twist on gin tonic infused with the sweetness of elder flower",
       "ingredients": "Gin, Elderflower Liqueur, Lime, Tonic, Stoicism",
-      "tags": "#Fresh #Herbal #Dry #Fizzy",
-      "abv": "12%",
+      "tags": "#Fresh #Herbal #Dry #Sweet #Tart #Bitter #Fizzy",
+      "abv": "13%",
       "hidden": false
     },
     {
@@ -51,7 +51,7 @@
       "title": "Budo Breeze",
       "description": "A super smooth grape cocktail to celebrate Japanese grape 'budo' season",
       "ingredients": "Vodka, Grape Liqueur, Crème de cassis, Grapefruit Juice, Caring",
-      "tags": "#Sweet #Tart",
+      "tags": "#Strong #Sweet #Tart",
       "abv": "15%",
       "hidden": false
     },
@@ -59,7 +59,7 @@
       "title": "El Diablo",
       "description": "This devilish concoction is ironically a very good combination of berry and ginger",
       "ingredients": "El Charro Silver Tequila, Crème de Cassis, Lime Juice, Ginger Beer, Playfulness",
-      "tags": "#Strong #Spicy #Sweet #Fizzy",
+      "tags": "#Spicy #Sweet #Fizzy",
       "abv": "10%",
       "hidden": false
     },
