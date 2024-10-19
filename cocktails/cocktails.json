@@ -24,6 +24,14 @@
       "hidden": false
     },
     {
+      "title": "Tokyo Tea",
+      "description": "Way tastier than it's bastard cousin from Long Island",
+      "ingredients": "Vodka, Rum, Gin, Tequila, Tripple Secc, Midori, Lime Juice, Lemon Juice, Soda Water",
+      "tags": "#Strong #Sweet #Tart #Fizzy",
+      "abv": "15%",
+      "hidden": false
+    },
+    {
       "title": "Go Fuck Yourself",
       "description": "Fresh ginger infused with a classic Margarita",
       "ingredients": "El Charro Silver Tequila, Lime Juice, Ginger Liqueur, Attitude",
@@ -53,6 +61,14 @@
       "ingredients": "Vodka, Grape Liqueur, Crème de cassis, Grapefruit Juice, Caring",
       "tags": "#Strong #Sweet #Tart",
       "abv": "15%",
+      "hidden": false
+    },
+    {
+      "title": "Okinawa Apple",
+      "description": "A tropical blend of sweet apple and the sharp citrusy flavor of shikuwasa, a lime-like fruit native to Okinawa",
+      "ingredients": "Vodka, Apple Cider, Apple Puree, Shikuwasa Juice",
+      "tags": "#Sweet #Tart",
+      "abv": "9%",
       "hidden": false
     },
     {
