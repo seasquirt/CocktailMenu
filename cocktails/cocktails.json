@@ -1,11 +1,19 @@
 [
     {
+      "title": "Birthday Cake",
+      "description": "A decadent, dessert-like cocktail that tastes just like a liquid birthday cake. Sweet, creamy, and dangerously smooth.",
+      "ingredients": "Iced Cake Vodka, Amaretto, White Chocolate Liqueur, Half and Half, Wishes",
+      "tags": "#Strong #Sweet #Creamy",
+      "abv": "16%",
+      "hidden": false
+    },
+    {
       "title": "Too Much Volcano",
       "description": "A fiery homage to Mount Aso, the largest active volcano in Japan",
       "ingredients": "El Charro Silver Tequila, Grapefruit Juice, Cointreau, Lime, Tonic, Spice!",
       "tags": "#Tart #Spicy #Fizzy",
       "abv": "11%",
-      "hidden": false
+      "hidden": true
     },
     {
       "title": "Like A Magic Mule",
@@ -13,7 +21,7 @@
       "ingredients": "Vodka, Elderflower Liqueur, Lemon Juice, Creme De Violet, Ginger Beer, Love",
       "tags": "#Fresh #Fizzy #Herbal #Spicy",
       "abv": "11%",
-      "hidden": false
+      "hidden": true
     },
     {
       "title": "Life Is Balloons",
@@ -45,7 +53,7 @@
       "ingredients": "Gin, Elderflower Liqueur, Lime, Tonic, Stoicism",
       "tags": "#Fresh #Herbal #Dry #Sweet #Tart #Bitter #Fizzy",
       "abv": "13%",
-      "hidden": false
+      "hidden": true
     },
     {
       "title": "Strangelove",
@@ -61,7 +69,7 @@
       "ingredients": "Vodka, Grape Liqueur, Crème de cassis, Grapefruit Juice, Caring",
       "tags": "#Strong #Sweet #Tart",
       "abv": "15%",
-      "hidden": false
+      "hidden": true
     },
     {
       "title": "Okinawa Apple",
@@ -69,7 +77,7 @@
       "ingredients": "Vodka, Apple Cider, Apple Puree, Shikuwasa Juice",
       "tags": "#Sweet #Tart",
       "abv": "9%",
-      "hidden": false
+      "hidden": true
     },
     {
       "title": "El Diablo",
@@ -77,7 +85,7 @@
       "ingredients": "El Charro Silver Tequila, Crème de Cassis, Lime Juice, Ginger Beer, Playfulness",
       "tags": "#Spicy #Sweet #Fizzy",
       "abv": "10%",
-      "hidden": false
+      "hidden": true
     },
     {
       "title": "Blue Monday",
@@ -90,9 +98,81 @@
     {
       "title": "Easy Lover",
       "description": "A tropical delight that’s as refreshing as it is irresistible",
-      "ingredients": "Plantation 3 Stars Rum, Cranberry Juice, Pineapple Juice, Grenadine, Sprite",
+      "ingredients": "Plantation 3 Stars Rum, White Cranberry Juice, Pineapple Juice, Grenadine, Sprite",
       "tags": "#Sweet #Fizzy",
       "abv": "6%",
+      "hidden": false
+    },
+    {
+      "title": "Ichigo 15",
+      "description": "Drawing inspiration from the Japanese word for strawberry, ichigo, this creamy cocktail may resemble a classic strawberry milkshake, but it's a luxurious adult indulgence",
+      "ingredients": "Vodka, Heavy Cream, Strawberry Syrup, Pineapple Juice, Freeze Dried Strawberry",
+      "tags": "#Sweet #Creamy",
+      "abv": "12%",
+      "hidden": true
+    },
+    {
+      "title": "PGP",
+      "description": "Bright, light, and a perfect balance of sweet and tart. This original cocktail is positively Pink Grapefruit Perfection",
+      "ingredients": "Vodka, Grapefruit Juice, Pink Grapefruit Syrup, Secret Ingredient",
+      "tags": "#Sweet #Tart #Bitter #Fresh",
+      "abv": "12%",
+      "hidden": true
+    },
+    {
+      "title": "Black Forest",
+      "description": "Modeled after the popular German dessert Schwarzwälder Kirschtorte, this is an indulgent mix of sweet chocolate, and dark cherry",
+      "ingredients": "Dark Chocolate Liqueur, Cherry Liqueur, Milk, Heavy Cream, Decadence",
+      "tags": "#Sweet #Creamy",
+      "abv": "6%",
+      "hidden": true
+    },
+    {
+      "title": "Aqua Marine",
+      "description": "A bit on the sweeter side, this juicy fruity concoction is very easy drinking",
+      "ingredients": "Vodka, Apple Juice, Peach Liqueur, Blue Curacao, Soda, Vibrance",
+      "tags": "#Sweet #Fizzy #Fresh",
+      "abv": "8%",
+      "hidden": false
+    },
+    {
+      "title": "Sakuranbo 5",
+      "description": "Inspired by the fleeting beauty of cherry blossom season, this creamy and delicately sweet cocktail captures the essence of springtime in Japan",
+      "ingredients": "Vodka, Heavy Cream, Cherry Syrup, Pineapple Juice, Maraschino Cherry",
+      "tags": "#Sweet #Creamy",
+      "abv": "12%",
+      "hidden": false
+    },
+    {
+      "title": "Blossom Breeze",
+      "description": "A tangy and creamy lychee cocktail with floral notes remenecent of sakura season",
+      "ingredients": "Vodka, Lychee Calpico, White Cranberry Juice, Elderflower Liqueur, Soda Water, Cum",
+      "tags": "#Sweet #Tart #Creamy #Fresh #Fizzy",
+      "abv": "6%",
+      "hidden": false
+    },
+    {
+      "title": "Golden Crane",
+      "description": "A refreshing and unique Japanese-inspired cocktail blending citrus, honey, and umami notes with a sparkling finish",
+      "ingredients": "Roku Gin, Yuzu Juice, Honey Syrup, Plum Wine, Soda Water, A Drop of Soy Sauce",
+      "tags": "#Fresh #Fizzy #Sweet #Herbal",
+      "abv": "8%",
+      "hidden": false
+    },
+    {
+      "title": "Spikey Fuckin Rat Juice",
+      "description": "A luminous, electrifying blend of botanicals, citrus, and tropical chaos, garenteed* to make you feel like a hedgehog.",
+      "ingredients": "Gin, Orange Bitters, Maraschino Liqueur, Lychee Calpico, Baja Blast, *not actually garenteed",
+      "tags": "#Sweet #Herbal #Creamy #Fizzy",
+      "abv": "9%",
+      "hidden": false
+    },
+    {
+      "title": "Rainbow Road",
+      "description": "A dangerously smooth, fruity, and tropical mix that’s as colorful as it is chaotic. One sip and you’re drifting into another dimension.",
+      "ingredients": "White Mystery Vodka, Malibu, Tequila, Peach Schnapps, Yuzu Juice, White Peach Calpico, Cream of Coconut, Sprite, A Speed Boost",
+      "tags": "#Sweet #Tart #Creamy #Fizzy",
+      "abv": "9%",
       "hidden": false
     }
   ]
