@@ -103,8 +103,8 @@ body {
 }
 
 .tag.selected {
-  border: 4px solid #ff0000;
-  margin: 1px;
+  border: 5px solid #ffffff;
+  margin: 0px;
 }
 
 .tag[data-tag="Savory"] { background-color: var(--color-savory); }
