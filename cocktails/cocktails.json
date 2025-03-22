@@ -10,7 +10,7 @@
     {
       "title": "Too Much Volcano",
       "description": "A fiery homage to Mount Aso, the largest active volcano in Japan",
-      "ingredients": "El Charro Silver Tequila, Grapefruit Juice, Cointreau, Lime, Tonic, Spice!",
+      "ingredients": "Silver Tequila, Grapefruit Juice, Cointreau, Lime, Tonic, Spice!",
       "tags": "#Tart #Spicy #Fizzy",
       "abv": "11%",
       "hidden": true
@@ -42,7 +42,7 @@
     {
       "title": "Go Fuck Yourself",
       "description": "Fresh ginger infused with a classic Margarita",
-      "ingredients": "El Charro Silver Tequila, Lime Juice, Ginger Liqueur, Attitude",
+      "ingredients": "Silver Tequila, Lime Juice, Ginger Liqueur, Attitude",
       "tags": "#Strong #Tart #Spicy",
       "abv": "20%",
       "hidden": false
@@ -58,7 +58,7 @@
     {
       "title": "Strangelove",
       "description": "A reimagining of the classic rum and coke with tantalizing cherry notes",
-      "ingredients": "Plantation 3 Stars Rum, Heering Cherry Liqueur, Coke, Lemon, Soda Water",
+      "ingredients": "Rum, Heering Cherry Liqueur, Coke, Lemon, Soda Water",
       "tags": "#Sweet #Fizzy",
       "abv": "11%",
       "hidden": false
@@ -82,7 +82,7 @@
     {
       "title": "El Diablo",
       "description": "This devilish concoction is ironically a very good combination of berry and ginger",
-      "ingredients": "El Charro Silver Tequila, Crème de Cassis, Lime Juice, Ginger Beer, Playfulness",
+      "ingredients": "Silver Tequila, Crème de Cassis, Lime Juice, Ginger Beer, Playfulness",
       "tags": "#Spicy #Sweet #Fizzy",
       "abv": "10%",
       "hidden": true
@@ -98,7 +98,7 @@
     {
       "title": "Easy Lover",
       "description": "A tropical delight that’s as refreshing as it is irresistible",
-      "ingredients": "Plantation 3 Stars Rum, White Cranberry Juice, Pineapple Juice, Grenadine, Sprite",
+      "ingredients": "Rum, White Cranberry Juice, Pineapple Juice, Grenadine, Sprite",
       "tags": "#Sweet #Fizzy",
       "abv": "6%",
       "hidden": false
